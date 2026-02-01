@@ -1,0 +1,134 @@
+body {
+  margin: 3% 10% 3% 10%;
+}
+.timeAndDate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#current_time,
+#current_date {
+  display: block;
+  font-size: 40px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-weight: 700;
+}
+
+.current_subject,
+.day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.current_subject {
+  margin: 1% auto;
+}
+
+.day-display {
+  display: block;
+  background: green;
+  margin-bottom: 0.3rem;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.current .table-title {
+  background-color: aqua;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.current {
+  margin-bottom: 3.5rem;
+}
+
+.table-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.time-title {
+  background-color: blueviolet;
+  margin-bottom: 0.3rem;
+  font-size: 20px;
+}
+
+.time {
+  background-color: burlywood;
+  height: 4.5cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 0.5rem;
+}
+
+.subject {
+  background-color: chartreuse;
+  height: 4.5cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 0.5rem;
+}
+
+.subject-title {
+  background-color: chocolate;
+  margin-bottom: 0.3rem;
+  font-size: 20px;
+}
+
+.lab-title {
+  background-color: cornflowerblue;
+  margin-bottom: 0.3rem;
+  font-size: 20px;
+}
+
+.lab {
+  background-color: burlywood;
+  height: 4.5cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 0.5rem;
+}
+
+.lecture-title {
+  background-color: tomato;
+  margin-bottom: 0.3rem;
+  font-size: 20px;
+}
+
+.lecture {
+  background-color: darkgreen;
+  height: 4.5cm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 0.5rem;
+}
