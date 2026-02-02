@@ -265,7 +265,7 @@ body.night::before {
   }
   #current_time,
   #current_date {
-    font-size: 33px;
+    font-size: 30px;
   }
   .table-content {
     display: grid;
