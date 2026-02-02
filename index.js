@@ -83,6 +83,7 @@ const group_5 = "Y3.S2.WD.SE.01";
 
 
 function UpdateTime() {
+
   const now_time = new Date();
   let time_hovers = now_time.getHours();
   let time_mins = now_time.getMinutes();
@@ -106,6 +107,7 @@ function UpdateTime() {
   day_display.forEach(mo => {
     mo.innerHTML = today_day;
   });
+
 };
 
 UpdateTime();
@@ -113,6 +115,7 @@ setInterval(UpdateTime, 1000);
 
 
 function UpdateUpcomingLec() {
+
   const now_time = new Date();
   let time_hovers = now_time.getHours();
   let time_mins = now_time.getMinutes();
@@ -120,199 +123,265 @@ function UpdateUpcomingLec() {
 
   switch (today_day) {
     case days[0]:
-      if ((time_hovers <= 7 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "08:00 A.M- 10:00 A.M";
+
+      if ((time_hovers < 8)) {
+
+        up_lec_time.innerHTML = "08:00 A.Mc- 10:00 A.M";
         up_module.innerHTML = `${module_1} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_1} `;
         up_lab.innerHTML = lab5;
         up_lectures.innerHTML = lecture_1;
-      } else if ((time_hovers <= 9 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "10:00 A.M- 12:00 P.M";
+
+      } else if ((time_hovers < 10)) {
+
+        up_lec_time.innerHTML = "10:00 A.Mc- 12:00 P.M";
         up_module.innerHTML = `${module_4}-${group_1} ${lec_type_2} (${byod}) and ${module_2}-${group_2} ${lec_type_2} (${byod})`;
         up_group.innerHTML = "";
         up_lab.innerHTML = `${group_1} - ${lab3} / ${group_2} - ${lab6}`;
         up_lectures.innerHTML = `${group_1} - ${lecture_5} / ${group_2} - ${lecture_6}`;
-      } else if ((time_hovers <= 13 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "14:00 P.M- 17:00 P.M";
+
+      } else if ((time_hovers < 14)) {
+
+        up_lec_time.innerHTML = "02:00 P.M - 05:00 P.M";
         up_module.innerHTML = `${module_1} ${lec_type_1}`;
         up_group.innerHTML = ` ${group_1} / ${group_2}`;
         up_lab.innerHTML = lab7;
         up_lectures.innerHTML = lecture_7;
-      } else if ((time_hovers <= 16 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "17:00 P.M- 20:00 P.M";
+
+      } else if ((time_hovers < 17)) {
+
+        up_lec_time.innerHTML = "05:00 P.M - 08:00 P.M";
         up_module.innerHTML = `${module_4} ${lec_type_1}`;
         up_group.innerHTML = ` ${group_1} / ${group_2}`;
         up_lab.innerHTML = lab7;
         up_lectures.innerHTML = lecture_8;
+
       } else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[1]:
-      if ((time_hovers <= 8 && time_mins < 30)) {
-        up_lec_time.innerHTML = "08:30 A.M- 10:30 A.M";
+
+      if ((time_hovers < 8) || (time_hovers == 8 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "08:30 A.M - 10:30 A.M";
         up_module.innerHTML = `${module_1} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_4} `;
         up_lab.innerHTML = lab13;
         up_lectures.innerHTML = lecture_13;
-      } else if ((time_hovers <= 11 && time_mins < 30)) {
-        up_lec_time.innerHTML = "11:30 A.M- 13:30 P.M";
+
+      } else if ((time_hovers < 11) || (time_hovers == 11 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "11:30 A.M - 01:30 P.M";
         up_module.innerHTML = `${module_4} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_4} `;
         up_lab.innerHTML = lab3;
         up_lectures.innerHTML = lecture_5;
-      } else if ((time_hovers <= 14 && time_mins < 30)) {
-        up_lec_time.innerHTML = "14:30 A.M- 19:00 P.M";
+
+      } else if ((time_hovers < 14) || (time_hovers == 14 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "02:30 A.M - 07:00 P.M";
         up_module.innerHTML = `${module_4} ${lec_type_1}`;
         up_group.innerHTML = ` ${group_4} / ${group_5} `;
         up_lab.innerHTML = lab10;
         up_lectures.innerHTML = lecture_8;
+
       } else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[2]:
-      if ((time_hovers <= 17 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "18:00 P.M- 20:00 P.M";
+
+      if ((time_hovers < 18)) {
+
+        up_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         up_module.innerHTML = `${module_5} ${lec_type_3} `;
         up_group.innerHTML = "All WeekDay Groups";
         up_lab.innerHTML = "Online";
         up_lectures.innerHTML = lecture_11;
+
       } else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[3]:
-      if ((time_hovers <= 8 && time_mins < 30)) {
-        up_lec_time.innerHTML = "08:30 A.M- 10:30 A.M";
+
+      if ((time_hovers < 8) || (time_hovers == 8 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "08:30 A.M - 10:30 A.M";
         up_module.innerHTML = `${module_2} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_4} `;
         up_lab.innerHTML = lab11;
         up_lectures.innerHTML = lecture_12;
-      } else if ((time_hovers <= 11 && time_mins < 30)) {
-        up_lec_time.innerHTML = "11:30 A.M- 13:30 P.M";
+
+      } else if ((time_hovers < 11) || (time_hovers == 11 && time_mins <= 30)) {
+
+        up_lec_time.innerHTML = "11:30 A.M - 01:30 P.M";
         up_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_4} `;
         up_lab.innerHTML = lab3;
         up_lectures.innerHTML = lecture_14;
-      } else if ((time_hovers <= 14 && time_mins < 30)) {
-        up_lec_time.innerHTML = "14:30 P.M- 19:00 P.M";
+
+      } else if ((time_hovers < 14) || (time_hovers == 14 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "02:30 P.M - 07:00 P.M";
         up_module.innerHTML = `${module_3} ${lec_type_1}`;
         up_group.innerHTML = ` ${group_4} / ${group_5} `;
         up_lab.innerHTML = lab12;
         up_lectures.innerHTML = lecture_3;
-      } else if ((time_hovers <= 17 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "18:00 P.M- 20:00 P.M";
+
+      } else if ((time_hovers < 17)) {
+
+        up_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         up_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_2}`;
         up_lab.innerHTML = lab9;
         up_lectures.innerHTML = lecture_10;
+
       }
       else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[4]:
-      if ((time_hovers <= 10 && time_mins < 30)) {
-        up_lec_time.innerHTML = "10:30 A.M- 01:30 P.M";
+
+      if ((time_hovers < 10) || (time_hovers == 10 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "10:30 A.M - 01:30 P.M";
         up_module.innerHTML = `${module_1} ${lec_type_1} `;
         up_group.innerHTML = ` ${group_4} / ${group_5}`;
         up_lab.innerHTML = lab7;
         up_lectures.innerHTML = lecture_13;
-      } else if ((time_hovers <= 17 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "18:00 P.M- 20:00 P.M";
+
+      } else if ((time_hovers < 18)) {
+
+        up_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         up_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
         up_group.innerHTML = ` ${group_1}`;
         up_lab.innerHTML = lab8;
         up_lectures.innerHTML = lecture_9;
-      } else if ((time_hovers <= 18 && time_mins <= 59)) {
+
+      } else if ((time_hovers < 19)) {
+
         up_lec_time.innerHTML = "19:00 P.M- 20:00 P.M";
         up_module.innerHTML = `${module_5} ${lec_type_3} `;
         up_group.innerHTML = "All WeekDay Groups";
         up_lab.innerHTML = "Online";
         up_lectures.innerHTML = lecture_11;
+
       } else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
 
     case days[5]:
-      if ((time_hovers <= 11 && time_mins < 30)) {
-        up_lec_time.innerHTML = "08:00 A.M - 10:00 P.M";
+
+      if ((time_hovers < 11) || (time_hovers == 11 && time_mins < 30)) {
+
+        up_lec_time.innerHTML = "11:30 A.M - 02:30 P.M";
         up_module.innerHTML = `${module_2} ${lec_type_1} `;
         up_group.innerHTML = ` ${group_4} / ${group_5}`;
         up_lab.innerHTML = lab10;
         up_lectures.innerHTML = lecture_2;
 
       } else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
 
     case days[6]:
-      if ((time_hovers <= 7 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "08:00 A.M- 10:00 A.M";
+
+      if ((time_hovers < 8)) {
+
+        up_lec_time.innerHTML = "08:00 A.M - 10:00 A.M";
         up_module.innerHTML = `${module_1} ${lec_type_2}`;
         up_group.innerHTML = `${group_2}`;
         up_lab.innerHTML = lab1;
         up_lectures.innerHTML = lecture_1;
-      } else if ((time_hovers <= 10 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "11:00 A.M- 14:00 P.M";
+
+      } else if ((time_hovers < 11)) {
+
+        up_lec_time.innerHTML = "11:00 A.M - 14:00 P.M";
         up_module.innerHTML = `${module_2} ${lec_type_1}`;
         up_group.innerHTML = `${group_2} ${group_1}`;
         up_lab.innerHTML = lab2;
         up_lectures.innerHTML = lecture_2;
+
       } else if ((time_hovers <= 13 && time_mins <= 59)) {
+
         up_lec_time.innerHTML = "14:00 P.M- 17:00 P.M";
         up_module.innerHTML = `${module_3} ${lec_type_1}`;
         up_group.innerHTML = `${group_2} ${group_1}`;
         up_lab.innerHTML = lab2;
         up_lectures.innerHTML = lecture_3;
-      } else if ((time_hovers <= 17 && time_mins <= 59)) {
-        up_lec_time.innerHTML = "18:00 A.M- 20:00 P.M";
+
+      } else if ((time_hovers < 18)) {
+
+        up_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         up_module.innerHTML = `${module_2}-${group_1} ${lec_type_2} (${byod}) and ${module_4}-${group_2} ${lec_type_2} (${byod})`;
         up_group.innerHTML = "";
         up_lab.innerHTML = `${group_1} - ${lab3} / ${group_2} - ${lab4}`;
         up_lectures.innerHTML = `${group_1} - ${lecture_4} / ${group_2} - ${lecture_5}`;
+
       } else {
+
         up_lec_time.innerHTML = "-";
         up_module.innerHTML = "-";
         up_group.innerHTML = "-";
         up_lab.innerHTML = "-";
         up_lectures.innerHTML = "-";
+
       }
       break;
 
     default:
+
       up_lec_time.innerHTML = "-";
       up_module.innerHTML = "-";
       up_group.innerHTML = "-";
       up_lab.innerHTML = "-";
       up_lectures.innerHTML = "-";
+
       break;
   }
 };
@@ -321,12 +390,14 @@ UpdateUpcomingLec();
 setInterval(UpdateUpcomingLec, 1000);
 
 function UpdateCurrentLec() {
+
   const now_time = new Date();
   let time_hovers = now_time.getHours();
   let time_mins = now_time.getMinutes();
   let today_day = days[now_time.getDay()];
 
   switch (today_day) {
+
     case days[0]:
 
       if ((time_hovers >= 8 && time_hovers < 10) || (time_hovers == 10 && time_mins == 0)) {
@@ -371,7 +442,9 @@ function UpdateCurrentLec() {
 
       }
       break;
+
     case days[1]:
+
       if ((time_hovers > 8 && time_hovers < 10) || (time_hovers == 8 && time_mins >= 30) ||
         (time_hovers == 10 && time_mins <= 30)) {
 
@@ -407,6 +480,7 @@ function UpdateCurrentLec() {
 
       }
       break;
+
     case days[2]:
 
       if ((time_hovers >= 18 && time_hovers < 20) || (time_hovers == 20 && time_mins == 0)) {
@@ -474,6 +548,7 @@ function UpdateCurrentLec() {
 
       }
       break;
+
     case days[4]:
 
       if ((time_hovers > 10 && time_hovers < 13) || (time_hovers == 10 && time_mins >= 30)
@@ -594,12 +669,14 @@ UpdateCurrentLec();
 setInterval(UpdateCurrentLec, 1000);
 
 function UpdateEndLec() {
+
   const now_time = new Date();
   let time_hovers = now_time.getHours();
   let time_mins = now_time.getMinutes();
   let today_day = days[now_time.getDay()];
 
   switch (today_day) {
+
     case days[0]:
 
       if ((time_hovers == 10 && time_mins >= 1) || (time_hovers == 11) || (time_hovers == 12 && time_mins == 0)) {
@@ -641,171 +718,228 @@ function UpdateEndLec() {
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[1]:
-      if ((time_hovers <= 8 && time_mins < 30)) {
-        end_lec_time.innerHTML = "08:30 A.M- 10:30 A.M";
+
+      if ((time_hovers == 10 && time_mins >= 31) || (time_hovers >= 11 && time_hovers < 13) || (time_hovers == 13 && time_mins <= 30)) {
+
+        end_lec_time.innerHTML = "08:30 A.M - 10:30 A.M";
         end_module.innerHTML = `${module_1} ${lec_type_2} (${byod})`;
         end_group.innerHTML = ` ${group_4} `;
         end_lab.innerHTML = lab13;
         end_lectures.innerHTML = lecture_13;
-      } else if ((time_hovers <= 11 && time_mins < 30)) {
-        end_lec_time.innerHTML = "11:30 A.M- 13:30 P.M";
+
+      } else if ((time_hovers == 13 && time_mins >= 31) || (time_hovers >= 14 && time_hovers < 19) || (time_hovers == 19 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "11:30 A.M - 01:30 P.M";
         end_module.innerHTML = `${module_4} ${lec_type_2} (${byod})`;
         end_group.innerHTML = ` ${group_4} `;
         end_lab.innerHTML = lab3;
         end_lectures.innerHTML = lecture_5;
-      } else if ((time_hovers <= 14 && time_mins < 30)) {
-        end_lec_time.innerHTML = "14:30 A.M- 19:00 P.M";
+
+      } else if ((time_hovers == 19 && time_mins >= 1) || (time_hovers >= 20 && time_hovers < 22) || (time_hovers == 22 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "02:30 P.M - 07:00 P.M";
         end_module.innerHTML = `${module_4} ${lec_type_1}`;
         end_group.innerHTML = ` ${group_4} / ${group_5} `;
         end_lab.innerHTML = lab10;
         end_lectures.innerHTML = lecture_8;
+
       } else {
+
         end_lec_time.innerHTML = "-";
         end_module.innerHTML = "-";
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[2]:
-      if ((time_hovers <= 17 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "18:00 P.M- 20:00 P.M";
+
+      if ((time_hovers == 20 && time_mins >= 1) || (time_hovers >= 21 && time_hovers < 22) || (time_hovers == 22 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         end_module.innerHTML = `${module_5} ${lec_type_3} `;
         end_group.innerHTML = "All WeekDay Groups";
         end_lab.innerHTML = "Online";
         end_lectures.innerHTML = lecture_11;
+
       } else {
+
         end_lec_time.innerHTML = "-";
         end_module.innerHTML = "-";
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[3]:
-      if ((time_hovers <= 8 && time_mins < 30)) {
-        end_lec_time.innerHTML = "08:30 A.M- 10:30 A.M";
+
+      if ((time_hovers == 10 && time_mins >= 31) || (time_hovers >= 11 && time_hovers < 13) || (time_hovers == 13 && time_mins <= 30)) {
+
+        end_lec_time.innerHTML = "08:30 A.M - 10:30 A.M";
         end_module.innerHTML = `${module_2} ${lec_type_2} (${byod})`;
         end_group.innerHTML = ` ${group_4} `;
         end_lab.innerHTML = lab11;
         end_lectures.innerHTML = lecture_12;
-      } else if ((time_hovers <= 11 && time_mins < 30)) {
-        end_lec_time.innerHTML = "11:30 A.M- 13:30 P.M";
+
+      } else if ((time_hovers == 13 && time_mins >= 31) || (time_hovers >= 14 && time_hovers < 19) || (time_hovers == 19 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "11:30 A.M - 01:30 P.M";
         end_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
         end_group.innerHTML = ` ${group_4} `;
         end_lab.innerHTML = lab3;
         end_lectures.innerHTML = lecture_14;
-      } else if ((time_hovers <= 14 && time_mins < 30)) {
-        end_lec_time.innerHTML = "14:30 P.M- 19:00 P.M";
+
+      } else if ((time_hovers == 19 && time_mins >= 1) || (time_hovers == 20 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "02:30 P.M - 07:00 P.M";
         end_module.innerHTML = `${module_3} ${lec_type_1}`;
         end_group.innerHTML = ` ${group_4} / ${group_5} `;
         end_lab.innerHTML = lab12;
         end_lectures.innerHTML = lecture_3;
-      } else if ((time_hovers <= 17 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "18:00 P.M- 20:00 P.M";
+
+      } else if ((time_hovers == 20 && time_mins >= 1) || (time_hovers >= 21 && time_hovers < 22) || (time_hovers == 22 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         end_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
         end_group.innerHTML = ` ${group_2}`;
         end_lab.innerHTML = lab9;
         end_lectures.innerHTML = lecture_10;
+
       }
       else {
+
         end_lec_time.innerHTML = "-";
         end_module.innerHTML = "-";
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
+
     case days[4]:
-      if ((time_hovers <= 10 && time_mins < 30)) {
-        end_lec_time.innerHTML = "10:30 A.M- 01:30 P.M";
+
+      if ((time_hovers == 13 && time_mins >= 31) || (time_hovers >= 14 && time_hovers < 20) || (time_hovers == 20 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "10:30 A.M - 01:30 P.M";
         end_module.innerHTML = `${module_1} ${lec_type_1} `;
         end_group.innerHTML = ` ${group_4} / ${group_5}`;
         end_lab.innerHTML = lab7;
         end_lectures.innerHTML = lecture_13;
-      } else if ((time_hovers <= 17 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "18:00 P.M- 20:00 P.M";
+
+      } else if ((time_hovers == 20 && time_mins >= 1) || (time_hovers == 21 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         end_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
         end_group.innerHTML = ` ${group_1}`;
         end_lab.innerHTML = lab8;
         end_lectures.innerHTML = lecture_9;
-      } else if ((time_hovers <= 18 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "19:00 P.M- 20:00 P.M";
+
+      } else if ((time_hovers == 21 && time_mins >= 1) || (time_hovers == 22 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "07:00 P.M - 09:00 P.M";
         end_module.innerHTML = `${module_5} ${lec_type_3} `;
         end_group.innerHTML = "All WeekDay Groups";
         end_lab.innerHTML = "Online";
         end_lectures.innerHTML = lecture_11;
+
       } else {
+
         end_lec_time.innerHTML = "-";
         end_module.innerHTML = "-";
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
 
     case days[5]:
-      if ((time_hovers <= 11 && time_mins < 30)) {
-        end_lec_time.innerHTML = "08:00 A.M - 10:00 P.M";
+
+      if ((time_hovers == 13 && time_mins >= 31) || (time_hovers >= 14 && time_hovers < 22) || (time_hovers == 22 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "11:30 A.M - 01:30 P.M";
         end_module.innerHTML = `${module_2} ${lec_type_1} `;
         end_group.innerHTML = ` ${group_4} / ${group_5}`;
         end_lab.innerHTML = lab10;
         end_lectures.innerHTML = lecture_2;
 
       } else {
+
         end_lec_time.innerHTML = "-";
         end_module.innerHTML = "-";
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
 
     case days[6]:
-      if ((time_hovers <= 7 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "08:00 A.M- 10:00 A.M";
+
+      if ((time_hovers == 10 && time_mins >= 1) || (time_hovers >= 11 && time_hovers < 14) || (time_hovers == 14 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "08:00 A.M - 10:00 A.M";
         end_module.innerHTML = `${module_1} ${lec_type_2}`;
         end_group.innerHTML = `${group_2}`;
         end_lab.innerHTML = lab1;
         end_lectures.innerHTML = lecture_1;
-      } else if ((time_hovers <= 10 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "11:00 A.M- 14:00 P.M";
+
+      } else if ((time_hovers == 14 && time_mins >= 1) || (time_hovers >= 15 && time_hovers < 17) || (time_hovers == 17 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "11:00 A.M - 02:00 P.M";
         end_module.innerHTML = `${module_2} ${lec_type_1}`;
         end_group.innerHTML = `${group_2} ${group_1}`;
         end_lab.innerHTML = lab2;
         end_lectures.innerHTML = lecture_2;
-      } else if ((time_hovers <= 13 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "14:00 P.M- 17:00 P.M";
+
+      } else if ((time_hovers == 17 && time_mins >= 1) || (time_hovers >= 18 && time_hovers < 20) || (time_hovers == 20 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "02:00 P.M - 05:00 P.M";
         end_module.innerHTML = `${module_3} ${lec_type_1}`;
         end_group.innerHTML = `${group_2} ${group_1}`;
         end_lab.innerHTML = lab2;
         end_lectures.innerHTML = lecture_3;
-      } else if ((time_hovers <= 17 && time_mins <= 59)) {
-        end_lec_time.innerHTML = "18:00 A.M- 20:00 P.M";
+
+      } else if ((time_hovers == 20 && time_mins >= 1) || (time_hovers >= 21 && time_hovers < 22) || (time_hovers == 22 && time_mins == 0)) {
+
+        end_lec_time.innerHTML = "06:00 A.M - 08:00 P.M";
         end_module.innerHTML = `${module_2}-${group_1} ${lec_type_2} (${byod}) and ${module_4}-${group_2} ${lec_type_2} (${byod})`;
         end_group.innerHTML = "";
         end_lab.innerHTML = `${group_1} - ${lab3} / ${group_2} - ${lab4}`;
         end_lectures.innerHTML = `${group_1} - ${lecture_4} / ${group_2} - ${lecture_5}`;
+
       } else {
+
         end_lec_time.innerHTML = "-";
         end_module.innerHTML = "-";
         end_group.innerHTML = "-";
         end_lab.innerHTML = "-";
         end_lectures.innerHTML = "-";
+
       }
       break;
 
     default:
+
       end_lec_time.innerHTML = "-";
       end_module.innerHTML = "-";
       end_group.innerHTML = "-";
       end_lab.innerHTML = "-";
       end_lectures.innerHTML = "-";
+
       break;
   }
 };
+
 UpdateEndLec();
 setInterval(UpdateEndLec, 1000);
