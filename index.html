@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Y3S1 Semester Time Table</title>
   </head>
   <body>
@@ -13,36 +19,32 @@
     </div>
 
     <div class="current">
-      <p class="table-title">Upcoming Lecture</p>
+      <p class="table-title upcoming">Upcoming Lecture</p>
       <div class="current_subject">
-        <span class="day-display" id="day__display">Sunday</span>
+        <span class="day-display" id="day__display"></span>
         <div class="day">
           <div class="table-content">
             <div class="time-display">
               <div class="time-title">Lecture Time</div>
-              <div class="time" id="up_time">08:00 - 10:00</div>
+              <div class="time" id="up_time"></div>
             </div>
             <div class="subject-display">
-              <div class="subject-title">Module Type & Group</div>
+              <div class="subject-title">Module / Group</div>
               <div class="subject">
                 <p>
-                  <span class="module-type" id="up_module"
-                    >SE3030 - SA Practical</span
-                  >
+                  <span class="module-type" id="up_module"></span>
                   /
-                  <span class="group" id="up_group"> Y3.S1.WE.SE.0102</span>
+                  <span class="group" id="up_group"></span>
                 </p>
               </div>
             </div>
             <div class="lab-display">
               <div class="lab-title">Lab Location</div>
-              <div class="lab" id="up_lab">A405</div>
+              <div class="lab" id="up_lab"></div>
             </div>
             <div class="lecture-display">
               <div class="lecture-title">Lectures Names</div>
-              <div class="lecture" id="up_lectures">
-                Ms. Poojani Gunathilake , Ms. Karthiga Rajendran
-              </div>
+              <div class="lecture" id="up_lectures"></div>
             </div>
           </div>
         </div>
@@ -50,36 +52,32 @@
     </div>
 
     <div class="current">
-      <p class="table-title">Current Lecture</p>
+      <p class="table-title current-lecture">Current Lecture</p>
       <div class="current_subject">
-        <span class="day-display">Sunday</span>
+        <span class="day-display"></span>
         <div class="day">
           <div class="table-content">
             <div class="time-display">
               <div class="time-title">Lecture Time</div>
-              <div class="time" id="curr_time">08:00 - 10:00</div>
+              <div class="time" id="curr_time"></div>
             </div>
             <div class="subject-display">
-              <div class="subject-title">Module Type & Group</div>
+              <div class="subject-title">Module / Group</div>
               <div class="subject">
                 <p>
-                  <span class="module-type" id="curr_module"
-                    >SE3030 - SA Practical</span
-                  >
+                  <span class="module-type" id="curr_module"></span>
                   /
-                  <span class="group" id="curr_group"> Y3.S1.WE.SE.0102</span>
+                  <span class="group" id="curr_group"></span>
                 </p>
               </div>
             </div>
             <div class="lab-display">
               <div class="lab-title">Lab Location</div>
-              <div class="lab" id="curr_lab">A405</div>
+              <div class="lab" id="curr_lab"></div>
             </div>
             <div class="lecture-display">
               <div class="lecture-title">Lectures Names</div>
-              <div class="lecture" id="curr_lecture">
-                Ms. Poojani Gunathilake , Ms. Karthiga Rajendran
-              </div>
+              <div class="lecture" id="curr_lecture"></div>
             </div>
           </div>
         </div>
@@ -87,36 +85,32 @@
     </div>
 
     <div class="current">
-      <p class="table-title">Ended Lecture(s)</p>
+      <p class="table-title ended">Ended Lecture(s)</p>
       <div class="current_subject">
-        <span class="day-display">Sunday</span>
+        <span class="day-display"></span>
         <div class="day">
           <div class="table-content">
             <div class="time-display">
               <div class="time-title">Lecture Time</div>
-              <div class="time" id="end_lec_time">08:00 - 10:00</div>
+              <div class="time" id="end_lec_time"></div>
             </div>
             <div class="subject-display">
-              <div class="subject-title">Module Type & Group</div>
+              <div class="subject-title">Module / Group</div>
               <div class="subject">
                 <p>
-                  <span class="module-type" id="end_module"
-                    >SE3030 - SA Practical</span
-                  >
+                  <span class="module-type" id="end_module"></span>
                   /
-                  <span class="group" id="end_group"> Y3.S1.WE.SE.0102</span>
+                  <span class="group" id="end_group"></span>
                 </p>
               </div>
             </div>
             <div class="lab-display">
               <div class="lab-title">Lab Location</div>
-              <div class="lab" id="end_lab">A405</div>
+              <div class="lab" id="end_lab"></div>
             </div>
             <div class="lecture-display">
               <div class="lecture-title">Lectures Names</div>
-              <div class="lecture" id="end_lectures">
-                Ms. Poojani Gunathilake , Ms. Karthiga Rajendran
-              </div>
+              <div class="lecture" id="end_lectures"></div>
             </div>
           </div>
         </div>
@@ -125,4 +119,5 @@
   </body>
 
   <script src="./index.js"></script>
+  <script src="./decoration.js"></script>
 </html>
