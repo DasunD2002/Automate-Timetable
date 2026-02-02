@@ -99,7 +99,7 @@ function UpdateTime() {
   time_sec = String(time_sec).padStart(2, "0");
 
   const time_string = `${time_hovers} : ${time_mins} : ${time_sec}`;
-  const date_string = `${year} / ${month} / 23`;
+  const date_string = `${year} / ${month} / ${today}`;
 
   current_time.innerHTML = time_string;
   current_date.innerHTML = date_string;
