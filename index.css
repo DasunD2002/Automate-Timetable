@@ -216,31 +216,31 @@ body.night::before {
 }
 
 .sunday {
-  background: linear-gradient(135deg, #fef2f2, #fee2e2, #fecaca);
+  background: linear-gradient(135deg, #f0a47f, #cd3f3f, #faae34);
 }
 
 .monday {
-  background: linear-gradient(135deg, #9693d0, #7ab0f7, #7979fd);
+  background: linear-gradient(135deg, #89b0d5, #e0f77a, #6868f1);
 }
 
 .tuesday {
-  background: linear-gradient(135deg, #f0fdf4, #dcfce7, #bbf7d0);
+  background: linear-gradient(135deg, #7cf384, #caeb5e, #15d61b);
 }
 
 .wednesday {
-  background: linear-gradient(135deg, #faf5ff, #f3e8ff, #e9d5ff);
+  background: linear-gradient(135deg, #d8bdf3, #eb78ed, #762ac7);
 }
 
 .thursday {
-  background: linear-gradient(135deg, #fef3c7, #fde68a, #fcd34d);
+  background: linear-gradient(135deg, #fde586, #9ff85b, #eec233);
 }
 
 .friday {
-  background: linear-gradient(135deg, #fce7f3, #f9a8d4, #f472b6);
+  background: linear-gradient(135deg, #d989b7, #e171f0, #e963a8);
 }
 
 .saturday {
-  background: linear-gradient(135deg, #e0f2fe, #bae6fd, #7dd3fc);
+  background: linear-gradient(135deg, #9fcdec, #a7e65e, #45b7ec);
 }
 
 .upcoming {

@@ -8,13 +8,64 @@ function changeTableTitleBackground() {
 
   switch (today) {
 
+    case _days[0]:
+
+      table_title.forEach(val => {
+        val.classList.add("sunday");
+      })
+
+      break;
+
     case _days[1]:
+
       table_title.forEach(val => {
         val.classList.add("monday");
       })
+
+      break;
+
+    case _days[2]:
+
+      table_title.forEach(val => {
+        val.classList.add("tuesday");
+      })
+
+      break;
+
+    case _days[3]:
+
+      table_title.forEach(val => {
+        val.classList.add("wednesday");
+      })
+
+      break;
+
+    case _days[4]:
+
+      table_title.forEach(val => {
+        val.classList.add("thursday");
+      })
+
+      break;
+
+    case _days[5]:
+
+      table_title.forEach(val => {
+        val.classList.add("friday");
+      })
+
+      break;
+
+    case _days[6]:
+
+      table_title.forEach(val => {
+        val.classList.add("saturday");
+      })
+
       break;
 
     default:
+      console.log("There Have issue in Changing colors according to day");
       break;
   }
 };
