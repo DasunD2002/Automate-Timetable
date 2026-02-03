@@ -210,7 +210,7 @@ function UpdateUpcomingLec() {
 
         up_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         up_module.innerHTML = `${module_5} ${lec_type_3} `;
-        up_group.innerHTML = "All WeekDay Groups";
+        up_group.innerHTML = "All Weekend Groups";
         up_lab.innerHTML = "Online";
         up_lectures.innerHTML = lecture_11;
 
@@ -765,7 +765,7 @@ function UpdateEndLec() {
 
         end_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
         end_module.innerHTML = `${module_5} ${lec_type_3} `;
-        end_group.innerHTML = "All WeekDay Groups";
+        end_group.innerHTML = "All Weekend Groups";
         end_lab.innerHTML = "Online";
         end_lectures.innerHTML = lecture_11;
 
