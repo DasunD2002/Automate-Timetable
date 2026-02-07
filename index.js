@@ -569,11 +569,11 @@ function UpdateCurrentLec() {
 
       } else if ((time_hovers >= 18 && time_hovers < 20) || (time_hovers == 20 && time_mins == 0)) {
 
-        up_lec_time.innerHTML = "06:00 P.M - 08:00 P.M";
-        up_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
-        up_group.innerHTML = ` ${group_1}`;
-        up_lab.innerHTML = lab14;
-        up_lectures.innerHTML = lecture_5;
+        curr_time.innerHTML = "06:00 P.M - 08:00 P.M";
+        curr_module.innerHTML = `${module_3} ${lec_type_2} (${byod})`;
+        curr_group.innerHTML = ` ${group_1}`;
+        curr_lab.innerHTML = lab14;
+        curr_lecture.innerHTML = lecture_5;
 
       } else {
 
